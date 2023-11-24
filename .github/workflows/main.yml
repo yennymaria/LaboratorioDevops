@@ -1,0 +1,21 @@
+name: Pipeline Laboratorio Devops
+
+on:
+  pull_request:
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Se analiza el proyecto
+        uses: actions/checkout@v1
+      - name: Se ejecuta un comando
+        run: echo Esta ejecutando el Pipeline
+      - name: Se ejecutaron varias líneas
+        run: |
+          echo Varias Lineas
+          ls -la
